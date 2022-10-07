@@ -1,6 +1,6 @@
-# The-Dev-Post
+# DevJane
 
-My personal Gatsby blog. Forked from [Gatsby Blog Starter](https://github.com/gatsbyjs/gatsby-starter-blog).
+A DevJane Portfolio Example. Forked from [create React App Documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 ## 👇 Prerequisites
 
