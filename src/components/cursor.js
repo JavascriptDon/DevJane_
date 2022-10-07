@@ -1,6 +1,6 @@
 import React from "react";
 import gsap from "gsap";
-import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.145.0/three.min.js";
+
 export default function Cursor(){
 console.clear();
 
