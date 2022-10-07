@@ -42,13 +42,13 @@ export default function App() {
         </ul>
       </nav>
       <div className="text-center p-10 py-10">
-        <h2 className="text-5xl py-2 text-accent font-medium dark:text-indigo-600 md:text-6xl">
+        <h2 className="text-5xl py-2 text-accent font-medium md:text-6xl">
           Jane Doe
         </h2>
         <h3 className="text-2xl py-2 text-primary md:text-3xl">
           Developer and designer.
         </h3>
-        <p className="text-md py-5 leading-8 text-secondary dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+        <p className="text-md py-5 leading-8 text-secondary max-w-xl mx-auto md:text-xl">
         Freelancer providing services for programming and design content needs. Come with me down here, and let's get to work!
         </p>
         <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400 ">
@@ -70,7 +70,7 @@ export default function App() {
     <section>
       <div>
         <h3 className="text-3xl py-1 text-primary ">Services I offer</h3>
-        <p className="text-md py-2 leading-8 text-secondary dark:text-gray-200">
+        <p className="text-md py-2 leading-8 text-secondary">
           Since the beginning of my journey as a freelance designer and
           developer, I've done remote work for
           <span className="text-indigo-500"> agencies </span>
@@ -78,7 +78,7 @@ export default function App() {
           and collaborated with talanted people to create digital products
           for both business and consumer use.
         </p>
-        <p className="text-md py-2 leading-8 text-secondary dark:text-gray-200">
+        <p className="text-md py-2 leading-8 text-secondary">
           I offer from a wide range of services, including brand design,
           programming and teaching.
         </p>
@@ -180,7 +180,7 @@ export default function App() {
     <section className="py-10">
       <div>
         <h3 className="text-3xl py-1 text-primary ">Portofolio</h3>
-        <p className="text-md py-2 leading-8 text-secondary dark:text-gray-200">
+        <p className="text-md py-2 leading-8 text-secondary">
           Since the beginning of my journey as a freelance designer and
           developer, I've done remote work for
           <span className="text-indigo-500"> agencies </span>
@@ -188,7 +188,7 @@ export default function App() {
           and collaborated with talanted people to create digital products
           for both business and consumer use.
         </p>
-        <p className="text-md py-2 leading-8 text-secondary dark:text-gray-200">
+        <p className="text-md py-2 leading-8 text-secondar">
           I offer from a wide range of services, including brand design,
           programming and teaching.
         </p>
