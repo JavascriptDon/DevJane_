@@ -23,13 +23,13 @@ export default function App() {
       strings: ["I am a Developer.", "I am a Designer.", "I love building web apps."], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 300,
-      typeSpeed: 75,
-      backSpeed: 75,
+      typeSpeed: 25,
+      backSpeed: 25,
       backDelay: 100,
       smartBackspace: true,
       loop: true,
       showCursor: true,
-      cursorChar: ""
+      cursorChar: "",
     });
 
     // Destropying
