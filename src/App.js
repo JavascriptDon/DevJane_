@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef} from "react";
 import { FaMoon, FaTwitter, FaLinkedin, FaDribbble, FaSun} from 'react-icons/fa/index.js';
 import web1 from "./assets/images/web1.png";
 import web2 from "./assets/images/web2.png";
@@ -12,22 +11,44 @@ import code from "./assets/images/portfolio-01.png";
 import design from "./assets/images/portfolio-02.png";
 import responsive from "./assets/images/portfolio-03.png";
 import Logo from "./assets/images/devjane.png";
-import { TypeAnimation } from 'react-type-animation';
+import Typed from "typed.js";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
+
+  const element = useRef(null);  // Create Ref element.
+
+  useEffect(() => {
+    const typed = new Typed(element.current, {
+      strings: ["I am a Developer.", "I am a Designer.", "I love building web apps."], // Strings to display
+      // Speed settings, try diffrent values untill you get good results
+      startDelay: 300,
+      typeSpeed: 75,
+      backSpeed: 75,
+      backDelay: 100,
+      smartBackspace: true,
+      loop: true,
+      showCursor: true,
+      cursorChar: ""
+    });
+
+    // Destropying
+    return () => {
+      typed.destroy();
+    };
+  }, []);
   return (
     <main className={`bg-primary px-10 md:px-20 lg:px-40 ${darkMode ? "dark" : ""}`}>
     <section className="min-h-screen">
       <nav className="py-10 mb-12 flex justify-between">
-        <h1 className="font-burtons text-xl border-black">
+        <h1 className="font-Montserrat text-xl border-black">
           <img src={Logo} width={100} height={100} alt="" />
         </h1>
         <ul className="flex items-center">
           <li>
-          <div id="toggle" onClick={(e) => setDarkMode(!darkMode) }>
+          <button id="toggle" onClick={(e) => setDarkMode(!darkMode) } aria-label="btn">
             { darkMode ? <FaSun color="white" className="cursor-pointer text-2xl"/>: <FaMoon className="cursor-pointer text-2xl"/> }
-            </div>  
+            </button>  
           </li>
           <li id="switchTheme">
             <a 
@@ -44,19 +65,7 @@ export default function App() {
         <h2 className="text-5xl py-2 text-accent font-medium md:text-6xl">
           Jane Doe
         </h2>
-        <h3 className="text-2xl py-2 text-primary md:text-3xl">        
-        <TypeAnimation
-    // Same String at the start will only be typed once, initially
-    sequence={[
-    'Im a Developer.',
-    1000,
-    'Im a Designer.',
-    1000,
-    ]}
-    speed={75} // Custom Speed from 1-99 - Default Speed: 40
-    wrapper="span" // Animation will be rendered as a <span>
-    repeat={Infinity} // Repeat this Animation Sequence infinitely
-  />
+        <h3 className="text-2xl py-2 text-primary md:text-3xl" ref={element}>
         </h3>
         <p className="text-md py-5 leading-8 text-secondary max-w-xl mx-auto md:text-xl">
         Freelancer providing services for programming and design content needs. Come with me down here, and let's get to work!
@@ -72,7 +81,7 @@ export default function App() {
              <FaDribbble />
           </a>
         </div>
-        <div className="mx-auto rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96 ">
+        <div className="mx-auto rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
           <img src={devJ} className="object-cover relative w-full h-full" alt="" />
         </div>
       </div>
@@ -82,8 +91,8 @@ export default function App() {
         <h3 className="text-3xl py-1 text-primary ">Services I offer</h3>
         <p className="text-md py-2 leading-8 text-secondary">
         Leo vel fringilla est ullamcorper eget nulla facilisi etiam.
-          <span className="text-indigo-500"> Vestibulum mattis </span>
-          ullamcorper velit<span className="text-indigo-500">sed </span>
+          <span className="text-indigo-600"> Vestibulum mattis </span>
+          ullamcorper velit<span className="text-indigo-600"> sed </span>
           ullamcorper morbi tincidunt ornare. 
         </p>
         <p className="text-md py-2 leading-8 text-secondary">
@@ -190,8 +199,8 @@ export default function App() {
         <p className="text-md py-2 leading-8 text-secondary">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          <span className="text-indigo-500"> Integer  </span>
-          vitae justo <span className="text-indigo-500">eget </span>
+          <span className="text-indigo-600"> Integer  </span>
+          vitae justo <span className="text-indigo-600">eget </span>
           magna fermentum iaculis eu non.
         </p>
         <p className="text-md py-2 leading-8 text-secondar">
@@ -245,10 +254,9 @@ export default function App() {
     </section>
     <section className="py-10 md:mt-20">
       <footer>
-        <div className="flex justify-center text-center text-gray-400">
+        <div className="flex justify-center text-center text-gray-600">
           <a href="/" aria-label="Copyright Text">© Copyright 2022 DevFolio</a>
         </div>
-        <span className="flex justify-center text-center text-gray-400">Developed with 💖 by JavaScriptDon</span>
       </footer>
     </section>
   </main>
