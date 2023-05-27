@@ -13,6 +13,7 @@ import responsive from "./assets/images/portfolio-03.png";
 import Logo from "./assets/images/devjane.png";
 import Typed from "typed.js";
 import Modal from "./Modal.js";
+import Carousel from "./Carousel.js";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -23,7 +24,7 @@ export default function App() {
   const [isModal5, setModal5] = React.useState(false);
   const [isModal6, setModal6] = React.useState(false);
   const element = useRef(null);  // Create Ref element.
-
+ 
   useEffect(() => {
     const typed = new Typed(element.current, {
       strings: ["I am a Developer.", "I am a Designer.", "I love building web apps."], // Strings to display
@@ -162,7 +163,7 @@ export default function App() {
           <Modal
             isVisible={isModal}
             title="Totum"
-            content={<img src={web1} className="w-full h-full" alt=""/>}
+            content={<Carousel/>}
             footer={<button>Live Demo</button>}
             links={<button>Github</button>}
             onClose={() => setModal(false)}
@@ -178,7 +179,7 @@ export default function App() {
           <Modal
             isVisible={isModal2}
             title="ZOULU"
-            content={<img src={web2} className="w-full h-full" alt=""/>}
+            content={<Carousel/>}
             footer={<button>Live Demo</button>}
             links={<button>Github</button>}
             onClose={() => setModal2(false)}
@@ -194,7 +195,7 @@ export default function App() {
           <Modal
             isVisible={isModal3}
             title="Connect and Play 2.0"
-            content={<img src={web3} className="w-full h-full" alt=""/>}
+            content={<Carousel/>}
             footer={<button>Live Demo</button>}
             links={<button>Github</button>}
             onClose={() => setModal3(false)}
@@ -210,7 +211,7 @@ export default function App() {
            <Modal
             isVisible={isModal4}
             title="ISlandcrypto"
-            content={<img src={web4} className="w-full h-full" alt=""/>}
+            content={<Carousel/>}
             footer={<button>Live Demo</button>}
             links={<button>Github</button>}
             onClose={() => setModal4(false)}
@@ -226,7 +227,7 @@ export default function App() {
           <Modal
             isVisible={isModal5}
             title="Bodcust"
-            content={<img src={web5} className="w-full h-full" alt=""/>}
+            content={<Carousel/>}
             footer={<button>Live Demo</button>}
             links={<button>Github</button>}
             onClose={() => setModal5(false)}
@@ -242,7 +243,7 @@ export default function App() {
           <Modal
             isVisible={isModal6}
             title="HUSL"
-            content={<img src={web6} className="w-full h-full" alt=""/>}
+            content={<Carousel/>}
             footer={<button>Live Demo</button>}
             links={<button>Github</button>}
             onClose={() => setModal6(false)}
