@@ -10,7 +10,7 @@ import devJ from "./assets/images/dev-jane-01.png";
 import code from "./assets/images/portfolio-01.png";
 import design from "./assets/images/portfolio-02.png";
 import responsive from "./assets/images/portfolio-03.png";
-import Logo from "./assets/images/_dev.png";
+import Logo from "./assets/images/devjane.png";
 import Typed from "typed.js";
 import Modal from "./Modal.js";
 
@@ -253,7 +253,7 @@ export default function App() {
     <section className="py-10 md:mt-20">
       <footer>
         <div className="flex justify-center text-center text-gray-600">
-          <a href="/" aria-label="Copyright Text">© Copyright 2023 DevFolio</a>
+          <a href="/" aria-label="Copyright Text">© Copyright {new Date().getFullYear()}, DevFolio</a>
         </div>
       </footer>
     </section>
